@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@import "reset";
+
+// VARIABLE
+$colorLightGray: #d6d6d6;
+$colorGray: #929292;
+$colorDeepGray: #494949; 
+$colorLightBlue: #0070c9;
+
+// MIXIN
+@mixin positionCenter($top, $left, $transX, $transY) {
+    top: $top;
+    left: $left;
+    transform: translate($transX, $transY);
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+} 
+
+
+.frm {
+    overflow: hidden;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #323232;
+    align-items: center;
+    padding: 1rem; 
+}
+
+.logo_no_initial, 
+.icon_help {
+    height: 2rem;
+    cursor: pointer;
+}
+
+/* section */
+.section {
+    position: relative;
+    height: calc(100vh - 4.2rem);
+    > div {
+        position: absolute;
+        @include positionCenter(50%, 50%, -50%, -50%);
+        width: 75%;
+    }
+}
+
+/* section__aside */
+.aside {
+    > .info_slide_box {
+        width: 35%;
+        padding: 0.8rem 0;
+        margin-left: 100%;
+        border: 1px solid $colorLightGray;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 3px;
+        box-shadow: 0px 4px 4px -4px #d6d6d6;
+        transition: all 0.5s ease-in-out;
+    }
+    .show_info_slide_box {
+        margin-left: 65%;
+    }
+}
+
+/* section__article */
+.section_tit {
+    text-align: center;
+    > div {
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid #e5e6e6;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px 2px #f3f4f5;
+        .logo {
+            height: 2.5rem;
+            margin: 1rem;
+        }
+    }
+    > h1 {
+        font-size: 1.4rem;
+        margin: 1.6rem 0 1.3rem;
+    }
+}
+
+.section_login_inp {
+    > .inp_id_box,
+      .inp_pw_box {
+        overflow: hidden;
+        border: 1px solid #d6d6d6;
+        border-radius: 3px;
+        height: 3.5rem;
+        .login_inp {
+            float: left;
+            @include widthHeight(85%, 100%);
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: $colorDeepGray;
+        }
+        .login_inp::placeholder {
+            color: $colorGray;
+        }
+        span {
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include widthHeight(15%, 100%);
+            > .fa-arrow-alt-circle-right {
+                align-self: center;
+                font-size: 1.8rem; 
+                color: $colorGray;
+                cursor: pointer;
+            }
+            > .fa-arrow-alt-circle-right.arrow_active {
+                color: #494949;
+            }
+        }
+    }
+    & .inp_id_box {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    & .inp_pw_box {
+        visibility: hidden;
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    & .inp_pw_box.inp_active {
+        visibility: visible;
+    }
+    .active_inp_box {
+        border: 2px solid $colorLightBlue;
+    }
+}
+
+.section_etc {
+    text-align: center;
+    > p {
+        cursor: pointer;
+    }
+    & .join {
+        color: $colorDeepGray;
+        font-weight: bold;
+        padding: 2rem 0 0.7rem;
+        margin: 0 0 0.7rem;
+        box-shadow: 0 3px 3px -4px $colorLightGray;
+    }
+    & .lost_id_pw {
+        color: $colorLightBlue;
+    }
+}

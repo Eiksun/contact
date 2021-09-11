@@ -1,0 +1,174 @@
+html {
+  font-size: 10px;
+}
+
+html, body, main, header, section, article, aside, footer, div, span, ul, ol, li, dl, dt, dd, img,
+h1, h2, h3, h4, h5, h6, a, input, fieldset, legend, p, textarea, button, table, th, tr, td,
+thead, tbody, tfoot, form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li, ul, ol {
+  list-style: none;
+}
+
+input, button, textarea {
+  border: 0;
+  outline: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.frm {
+  overflow: hidden;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #323232;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo_no_initial,
+.icon_help {
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* section */
+.section {
+  position: relative;
+  height: calc(100vh - 4.2rem);
+}
+.section > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+/* section__aside */
+.aside > .info_slide_box {
+  width: 35%;
+  padding: 0.8rem 0;
+  margin-left: 100%;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px -4px #d6d6d6;
+  transition: all 0.5s ease-in-out;
+}
+.aside .show_info_slide_box {
+  margin-left: 65%;
+}
+
+/* section__article */
+.section_tit {
+  text-align: center;
+}
+.section_tit > div {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #e5e6e6;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 2px #f3f4f5;
+}
+.section_tit > div .logo {
+  height: 2.5rem;
+  margin: 1rem;
+}
+.section_tit > h1 {
+  font-size: 1.4rem;
+  margin: 1.6rem 0 1.3rem;
+}
+
+.section_login_inp > .inp_id_box,
+.section_login_inp .inp_pw_box {
+  overflow: hidden;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  height: 3.5rem;
+}
+.section_login_inp > .inp_id_box .login_inp,
+.section_login_inp .inp_pw_box .login_inp {
+  float: left;
+  width: 85%;
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #494949;
+}
+.section_login_inp > .inp_id_box .login_inp::placeholder,
+.section_login_inp .inp_pw_box .login_inp::placeholder {
+  color: #929292;
+}
+.section_login_inp > .inp_id_box span,
+.section_login_inp .inp_pw_box span {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+}
+.section_login_inp > .inp_id_box span > .fa-arrow-alt-circle-right,
+.section_login_inp .inp_pw_box span > .fa-arrow-alt-circle-right {
+  align-self: center;
+  font-size: 1.8rem;
+  color: #929292;
+  cursor: pointer;
+}
+.section_login_inp > .inp_id_box span > .fa-arrow-alt-circle-right.arrow_active,
+.section_login_inp .inp_pw_box span > .fa-arrow-alt-circle-right.arrow_active {
+  color: #494949;
+}
+.section_login_inp .inp_id_box {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.section_login_inp .inp_pw_box {
+  visibility: hidden;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.section_login_inp .inp_pw_box.inp_active {
+  visibility: visible;
+}
+.section_login_inp .active_inp_box {
+  border: 2px solid #0070c9;
+}
+
+.section_etc {
+  text-align: center;
+}
+.section_etc > p {
+  cursor: pointer;
+}
+.section_etc .join {
+  color: #494949;
+  font-weight: bold;
+  padding: 2rem 0 0.7rem;
+  margin: 0 0 0.7rem;
+  box-shadow: 0 3px 3px -4px #d6d6d6;
+}
+.section_etc .lost_id_pw {
+  color: #0070c9;
+}
+
+/*# sourceMappingURL=index.css.map */
