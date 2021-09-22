@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+@import "common";
+
+
+.main_section {
+    @include displayFlex(flex, row);
+    > .sc_left_center_bundle {
+        width: 42%;
+        background-color: #e5e6e8;
+		border-right: 1px solid #c5c5c5;
+    }
+}
+
+/* The left screen */
+.sc_left {
+    > .jcloud_label {
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 3rem;
+        cursor: pointer;
+        border-bottom: 1px solid $colorLightBlue;
+    }
+    > .jcloud_label::after {
+        content: " 연락처";
+        color: $colorLightBlue;
+    }
+    > .jcloud_tit {
+
+    }
+    > .add_number {
+        @include displayFlex(flex, row-reverse);
+        background-color: #d7d8db;
+        border-bottom: 1px solid #c5c5c5;
+        .xi-plus {
+            font-size: 1.7em;
+            line-height: 3rem;
+            cursor: pointer;
+        }
+    }
+}
+
+/* The center screen */
+.sc_center {
+    height: calc(100vh - 6.1rem);
+    overflow-y: scroll;
+    background-color: #f9f9f9;
+    > .search_contact_box { 
+        border-bottom: 1px solid $colorLightBlue;
+        @include displayFlex(flex, row);
+        align-items: center;
+        .icon_search {
+            width: 10%;
+        }
+        .inp_search {
+            width: 80%;
+            height: 3.5rem;
+            background-color: #f9f9f9;
+        }
+        .inp_search::placeholder {
+            font-size: 1rem;
+            text-indent: 0.3rem;
+        }
+        .xi-close-thin {
+            width: 10%; 
+            cursor: pointer;
+        }
+    }
+    > .contact_list_box {
+        
+    }
+}
+
+/* The right screen */
+.sc_right {
+    width: 58%;
+    > .sc_toolbar_box {
+        border-bottom: 1px solid $colorLightBlue;
+        line-height: 3rem;
+        font-size: 1.3rem;
+        .container {
+            @include displayFlex(flex, row);
+            justify-content: space-between;
+            span {
+                color: $colorLightBlue;
+                cursor: pointer;
+            }
+            & .user_name {
+                font-weight: bold;
+            }
+        }
+    }
+    > .contact_info_box {
+        width: 90%;
+        margin: 0 auto;
+        .contact_info_header {
+            .info_left {
+                @include displayFlex(flex, row);
+                justify-content: center;
+                align-items: center;
+                .empty_image {
+                    height: 4.3rem;
+                }
+            }
+            .info_right {
+                @include displayFlex(flex, column);
+                justify-content: center;
+                p:last-child {
+                    color: $colorGray;
+                }
+            }
+        }
+        .contact_info_contents {
+            .info_item {
+                line-height: 3rem;
+                border-bottom: 1px solid #e7e7e7; 
+                .info_left {
+                    color: $colorGray;
+                    text-align: right;
+                }
+                .info_right {
+                    color: $colorDeepGray;
+                    border-bottom: 1px solid rgb(238, 238, 238);
+                }
+            }
+        }
+    }
+}
+
+.contact_info {
+    @include displayFlex(flex, row);
+    .info_left {
+        width: 30%;
+    }
+    .info_right {
+        width: 67%;
+    }
+}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@import "reset";
+
+
+// VARIABLE
+$colorLightGray: #d6d6d6;
+$colorGray: #929292;
+$colorDeepGray: #494949; 
+$colorLightBlue: #0070c9;
+
+// MIXIN
+@mixin positionCenter($top, $left, $transX, $transY) {
+    top: $top;
+    left: $left;
+    transform: translate($transX, $transY);
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+} 
+
+@mixin displayFlex($display, $flexDirection) {
+    display: $display;
+    flex-direction: $flexDirection;
+}
+
+// 공통
+.hideText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+.row_contents {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+// media
+@media all and (min-width: 768px) {
+    .row_contents {
+        width: 90%;
+    }
+}

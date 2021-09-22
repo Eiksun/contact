@@ -2,6 +2,14 @@ html {
   font-size: 10px;
 }
 
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: #fff;
+}
+
 html, body, main, header, section, article, aside, footer, div, span, ul, ol, li, dl, dt, dd, img,
 h1, h2, h3, h4, h5, h6, a, input, fieldset, legend, p, textarea, button, table, th, tr, td,
 thead, tbody, tfoot, form {
@@ -29,42 +37,78 @@ button {
   cursor: pointer;
 }
 
+.hideText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.row_contents {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 768px) {
+  .row_contents {
+    width: 90%;
+  }
+}
 .frm {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 /* header */
 .header {
+  background-color: #323232;
+}
+.header > .row_contents {
   display: flex;
   justify-content: space-between;
-  background-color: #323232;
   align-items: center;
-  padding: 1rem;
+  padding: 1em;
 }
 
 .logo_no_initial,
 .icon_help {
-  height: 2rem;
+  height: 2em;
   cursor: pointer;
 }
 
 /* section */
 .section {
   position: relative;
-  height: calc(100vh - 4.2rem);
+  height: calc(100vh - 4em);
+  height: calc((var(--vh, 1vh) * 100) - 4em);
 }
 .section > div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 400px;
   width: 75%;
 }
 
 /* section__aside */
+.aside {
+  overflow: hidden;
+}
 .aside > .info_slide_box {
   width: 35%;
-  padding: 0.8rem 0;
+  max-width: 230px;
+  padding: 0.8em 0;
   margin-left: 100%;
   border: 1px solid #d6d6d6;
   text-align: center;
@@ -89,12 +133,12 @@ button {
   box-shadow: 2px 2px 4px 2px #f3f4f5;
 }
 .section_tit > div .logo {
-  height: 2.5rem;
-  margin: 1rem;
+  height: 2.5em;
+  margin: 1em;
 }
 .section_tit > h1 {
-  font-size: 1.4rem;
-  margin: 1.6rem 0 1.3rem;
+  font-size: 1.4em;
+  margin: 1.6em 0 1.3em;
 }
 
 .section_login_inp > .inp_id_box,
@@ -102,15 +146,15 @@ button {
   overflow: hidden;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
-  height: 3.5rem;
+  height: 3.5em;
 }
 .section_login_inp > .inp_id_box .login_inp,
 .section_login_inp .inp_pw_box .login_inp {
   float: left;
   width: 85%;
   height: 100%;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
   color: #494949;
 }
 .section_login_inp > .inp_id_box .login_inp::placeholder,
@@ -129,7 +173,7 @@ button {
 .section_login_inp > .inp_id_box span > .fa-arrow-alt-circle-right,
 .section_login_inp .inp_pw_box span > .fa-arrow-alt-circle-right {
   align-self: center;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   color: #929292;
   cursor: pointer;
 }
@@ -157,18 +201,35 @@ button {
 .section_etc {
   text-align: center;
 }
-.section_etc > p {
+.section_etc > div a {
   cursor: pointer;
 }
-.section_etc .join {
+.section_etc > div .join {
   color: #494949;
   font-weight: bold;
-  padding: 2rem 0 0.7rem;
-  margin: 0 0 0.7rem;
+}
+.section_etc > div .lost_id_pw {
+  color: #0070c9;
+}
+.section_etc > div:first-child {
+  padding: 2em 0 0.7em;
+  margin: 0 0 0.7em;
   box-shadow: 0 3px 3px -4px #d6d6d6;
 }
-.section_etc .lost_id_pw {
-  color: #0070c9;
+
+@media all and (min-width: 375px) {
+  .frm {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 768px) {
+  .frm {
+    font-size: 1.3em;
+  }
+
+  .aside .show_info_slide_box {
+    margin-left: calc(100% - 230px);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

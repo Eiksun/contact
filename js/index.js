@@ -1,4 +1,17 @@
 window.onload = () => {
+    // login box hidden & visible
+    const inp_id_arrow_icon = document.getElementById("inp_id_arrow_icon");
+
+    inp_id_arrow_icon.addEventListener('click', () => {
+        loginInputVisible();
+    });
+
+    this.addEventListener('keypress', () => {
+        if(window.event.keyCode == 13) {
+            loginInputVisible();
+        }
+    });
+
     // info_slide_box content toggle event
     const icon_help = document.getElementById("icon_help");
     const info_slide_box = document.getElementById("info_slide_box");
@@ -26,24 +39,27 @@ window.onload = () => {
     });
 }       
 
-// change styleLogin box function
+// change style login box function
 const LoginBoxStylechange = (This) => {
-    const inp_pw_box = document.getElementById("inp_pw_box");
     const arrow_icon = document.getElementById(`${This.id}_arrow_icon`);
 
+    // 화살표 아이콘 active
     if(This.value.length) {
         arrow_icon.classList.add('arrow_active');
     }
     else {
         arrow_icon.classList.remove('arrow_active');
     }
+}
 
-    if(This.classList.contains('inp_id')) {
-        if(This.value.length) {
-            inp_pw_box.classList.add('inp_active');
-        }
-        else {
-            inp_pw_box.classList.remove('inp_active');
-        }
-    } 
+// login box hidden & visible function
+const loginInputVisible = () => {
+    const inp_id_arrow_icon = document.getElementById("inp_id_arrow_icon");
+
+    if(inp_id_arrow_icon.classList.contains('arrow_active')) {
+        inp_pw_box.classList.add('inp_active');
+    }
+    else {
+        inp_pw_box.classList.remove('inp_active');
+    }
 }

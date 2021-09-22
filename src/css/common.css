@@ -37,4 +37,31 @@ button {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=reset.css.map */
+.hideText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.row_contents {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 768px) {
+  .row_contents {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
