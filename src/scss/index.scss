@@ -106,8 +106,11 @@
                 color: $colorGray;
                 cursor: pointer;
             }
-            > .fa-arrow-alt-circle-right.arrow_active {
+            .fa-arrow-alt-circle-right.arrow_active {
                 color: #494949;
+            }
+            .fa-arrow-alt-circle-right.ico_hidden {
+                display: none;
             }
         }
     }

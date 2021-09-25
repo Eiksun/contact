@@ -56,7 +56,7 @@ echo <<<HTML
                     <label for="phone_number">휴대전화</label>
                 </div>
                 <div class="info_right">
-                    <input type="number" name="phone_number" placeholder="'-'를 제외하고 입력해주세요" autocomplete="off" />
+                    <input type="text" name="phone_number" placeholder="'-'를 제외하고 입력해주세요" autocomplete="off" />
                 </div>
             </article>
 

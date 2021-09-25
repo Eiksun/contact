@@ -177,9 +177,13 @@ button {
   color: #929292;
   cursor: pointer;
 }
-.section_login_inp > .inp_id_box span > .fa-arrow-alt-circle-right.arrow_active,
-.section_login_inp .inp_pw_box span > .fa-arrow-alt-circle-right.arrow_active {
+.section_login_inp > .inp_id_box span .fa-arrow-alt-circle-right.arrow_active,
+.section_login_inp .inp_pw_box span .fa-arrow-alt-circle-right.arrow_active {
   color: #494949;
+}
+.section_login_inp > .inp_id_box span .fa-arrow-alt-circle-right.ico_hidden,
+.section_login_inp .inp_pw_box span .fa-arrow-alt-circle-right.ico_hidden {
+  display: none;
 }
 .section_login_inp .inp_id_box {
   border-bottom-left-radius: 0;

@@ -1,4 +1,6 @@
 <?php
+//include './session.php';
+
 echo <<<HTML
 <!DOCTYPE html>
 <html lang="ko">

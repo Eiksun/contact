@@ -1,5 +1,7 @@
 <?php
+
 include './common/header.php';
+
 
 echo <<<HTML
 <!-- STYLE -->
@@ -8,7 +10,7 @@ echo <<<HTML
 <script src="./js/index.js" type="text/javascript"></script>
 
 
-<form action="" id="frm" class="frm">
+<form method="POST" id="frm" class="frm" onSubmit="return frm_chk();">
     <header class="header">
         <div class="row_contents">
             <a href="javascript:">
@@ -38,13 +40,13 @@ echo <<<HTML
 
             <article class="section_login_inp">
                 <div class="inp_id_box">
-                    <input type="text" name="inp_id" id="inp_id" class="login_inp inp_id" onkeyup="LoginBoxStylechange(this);" placeholder="ID" maxlength="40">
+                    <input type="text" name="id" id="inp_id" class="login_inp inp_id" onkeyup="LoginBoxStylechange(this);" placeholder="ID" maxlength="40">
                     <span>
                         <i id="inp_id_arrow_icon" class="far fa-arrow-alt-circle-right"></i>
                     </span>
                 </div>
                 <div id="inp_pw_box" class="inp_pw_box">
-                    <input type="password" name="inp_pw" id="inp_pw" class="login_inp inp_pw" onkeyup="LoginBoxStylechange(this);" placeholder="암호" maxlength="15">
+                    <input type="password" name="pw" id="inp_pw" class="login_inp inp_pw" onkeyup="LoginBoxStylechange(this);" placeholder="암호" maxlength="15">
                     <span>
                         <i id="inp_pw_arrow_icon" class="far fa-arrow-alt-circle-right"></i>
                     </span>
@@ -67,4 +69,5 @@ echo <<<HTML
 HTML;
 
 include './common/footer.php';
+
 ?>

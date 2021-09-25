@@ -1,10 +1,6 @@
 <?php
     include './common/comm.php';
 
-    // Connect Table
-    //$// = "SELECT * FROM `mkNumBook`";
-   // $table = mysqli_query($condb, $sql);
-
     $id = $_POST['id'];
     $pw = md5($_POST['pw']);
     $last_name = $_POST['last_name'];
