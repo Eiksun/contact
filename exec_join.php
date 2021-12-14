@@ -30,9 +30,8 @@
         }
     }
 
-    $SQL = "INSERT INTO
-            `user_info`
-                (id, 
+    $SQL = "INSERT INTO `user_info` (
+                id, 
                 pw, 
                 last_name, 
                 first_name, 
@@ -43,8 +42,8 @@
                 email, 
                 memo, 
                 regist_date)
-            VALUES
-                ('".$id."', 
+            VALUES (
+                '".$id."', 
                 '".$pw."', 
                 '".$last_name."', 
                 '".$first_name."', 
